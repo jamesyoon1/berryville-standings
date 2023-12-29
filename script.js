@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <td>${player.played}</td>
         <td>${player.won}</td>
         <td>${player.lost}</td>
-        <td>${player.lost}</td>
+        <td>${player.percentage}</td>
         </tr>
         `).join('');
     }
