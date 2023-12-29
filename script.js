@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     
     const csvData = `
-    Timestamp,WINNER,LOSER,SCORE (WINNER),SCORE (LOSER)
+Timestamp,WINNER,LOSER,SCORE (WINNER),SCORE (LOSER)
 12/28/2023 13:03:13,RYAN K,KEVIN L,14,12
 12/28/2023 15:35:17,KEVIN L,RYAN K,11,6
 12/28/2023 15:40:06,KEVIN D,JAMES Y,11,7
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 12/29/2023 12:43:04,KEVIN L,JAMES Y,11,7
 12/29/2023 12:47:47,KEVIN L,RYAN K,11,7
 12/29/2023 12:51:54,KEVIN L,CHASE G,11,2
+12/29/2023 12:58:09,CHASE G,RYAN K,13,11
+12/29/2023 13:01:44,KEVIN L,KEVIN D,11,0
+12/29/2023 13:09:40,RYAN K,KEVIN L,11,8
     `;
     
     const rows = csvData.trim().split('\n').map(row => row.split(','));
