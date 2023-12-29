@@ -20,7 +20,27 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     
     const rows = csvData.trim().split('\n').map(row => row.split(','));
+    //rows.reverse();
     
+    // Get the table reference
+    const table = document.getElementById('csvTable').getElementsByTagName('tbody')[0];
+
+    // Add data rows dynamically
+    for (let i = rows.length-1; i > 0; i--) {
+        const tr = table.insertRow();
+        // Only take the date part from the timestamp
+        const date = rows[i][0].split('/202')[0];
+        // Create a new array with the modified data
+        const rowData = [date, rows[i][1], rows[i][3], rows[i][4], rows[i][2]];
+        rowData.forEach(cellData => {
+            const td = tr.insertCell();
+            td.textContent = cellData;
+        });
+    }
+    
+    
+    
+    console.log(rows)
     const teamStats = {};
     
     rows.slice(1).forEach(row => {
@@ -80,3 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const tbody = document.querySelector('tbody');
     tbody.innerHTML = generateTableRows(standingsData);
 });
+
+
+
