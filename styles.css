@@ -26,6 +26,7 @@ body {
 
 .site-title {
     margin: 0;
+    text-align: center;
 }
 
 .standings-container {
@@ -38,7 +39,7 @@ body {
 }
 
 table {
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -52,6 +53,17 @@ th, td {
 th {
     background-color: #89cce7;
     color: #fff;
+}
+
+@media (max-width: 500px) {
+    /* Adjust styles for screens smaller than 600px */
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
 }
 
 h2 {
